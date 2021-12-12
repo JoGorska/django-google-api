@@ -2,6 +2,10 @@
 
 [Django Google API](#django-google-api)
 
+tutorial link https://www.youtube.com/watch?v=_vCT42vDfgw&t=962s
+
+link to the oryginal repository https://github.com/bobby-didcoding/did_django_google_api_tutorial
+
 [UX](#ux)
 + [User Stories](#user-stories)
 + [Wireframes](#wireframes)
