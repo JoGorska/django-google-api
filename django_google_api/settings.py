@@ -12,8 +12,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
-if os.path.isfile("env.py"):
-    import env
+from decouple import config
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -131,11 +131,11 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_cdn')
 
-GOOGLE_API_KEY = os.environ.get('GOOGLE_API_KEY')
+GOOGLE_API_KEY = config('GOOGLE_API_KEY')
 
-RECAPTCHA_KEY = os.environ.get('RECAPTCHA_KEY')
+RECAPTCHA_KEY = config('RECAPTCHA_KEY')
 
-RECAPTCHA_SECRET_KEY = os.environ.get('RECAPTCHA_SECRET_KEY')
+RECAPTCHA_SECRET_KEY = config('RECAPTCHA_SECRET_KEY')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
