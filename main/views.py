@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse
 from django.conf import settings
 
-from did_django_google_api_tutorial.mixins import Directions
+from django_google_api.mixins import Directions
 '''
 Basic view for routing 
 '''
