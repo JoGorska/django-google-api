@@ -31,7 +31,7 @@ class AccountView(TemplateView):
 	'''
 	Generic FormView with our mixin to display user account page
 	'''
-	template_name = "account.html"
+	template_name = "users/account.html"
 
 	@method_decorator(login_required)
 	def dispatch(self, *args, **kwargs):
@@ -76,7 +76,7 @@ class SignUpView(AjaxFormMixin, FormView):
 	Generic FormView with our mixin for user sign-up with reCAPTURE security
 	'''
 
-	template_name = "sign_up.html"
+	template_name = "users/sign_up.html"
 	form_class = UserForm
 	success_url = "/"
 
@@ -120,7 +120,7 @@ class SignInView(AjaxFormMixin, FormView):
 	Generic FormView with our mixin for user sign-in
 	'''
 
-	template_name = "sign_in.html"
+	template_name = "users/sign_in.html"
 	form_class = AuthForm
 	success_url = "/"
 

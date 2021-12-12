@@ -61,7 +61,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            'templates'
+            r'C:\Users\44745\_projects\django_google_api\django_google_api\templates'
         ],
         'APP_DIRS': True,
         'OPTIONS': {
